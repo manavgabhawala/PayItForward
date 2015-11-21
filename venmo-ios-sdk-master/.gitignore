@@ -1,0 +1,8 @@
+.DS_Store
+.localized
+*.xccheckout
+VENAppSwitchSample/Pods/*
+build/
+xcuserdata
+*.pbxuser
+Pods/
