@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "82AF19171C01040100D859D0"
+               BlueprintIdentifier = "82AF199A1C01141400D859D0"
                BuildableName = "Pay It Forward.app"
                BlueprintName = "Pay It Forward"
                ReferencedContainer = "container:Pay It Forward.xcodeproj">
@@ -32,7 +32,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "82AF19171C01040100D859D0"
+            BlueprintIdentifier = "82AF199A1C01141400D859D0"
             BuildableName = "Pay It Forward.app"
             BlueprintName = "Pay It Forward"
             ReferencedContainer = "container:Pay It Forward.xcodeproj">
@@ -55,7 +55,7 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "82AF19171C01040100D859D0"
+            BlueprintIdentifier = "82AF199A1C01141400D859D0"
             BuildableName = "Pay It Forward.app"
             BlueprintName = "Pay It Forward"
             ReferencedContainer = "container:Pay It Forward.xcodeproj">
@@ -74,7 +74,7 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "82AF19171C01040100D859D0"
+            BlueprintIdentifier = "82AF199A1C01141400D859D0"
             BuildableName = "Pay It Forward.app"
             BlueprintName = "Pay It Forward"
             ReferencedContainer = "container:Pay It Forward.xcodeproj">
