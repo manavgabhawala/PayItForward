@@ -13,11 +13,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 	var window: UIWindow?
 
-
+	let client = VenmoClient.clientWithAppId("3192", secret: "hPVdZRv7tXXYVAFuNZZU9ufTWBcq9gJQ")
+	
 	func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
 		// Override point for customization after application launch.
-		
-		let client = VenmoClient.clientWithAppId("3192", secret: "hPVdZRv7tXXYVAFuNZZU9ufTWBcq9gJQ")
 		
 		return true
 	}
@@ -44,6 +43,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 		// Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 	}
 
-
+	func application(application: UIApplication, openURL url: NSURL, sourceApplication: String?, annotation: AnyObject) -> Bool
+	{
+		
+		return client.openURL(url, completionHandler: { (transaction, error) -> Void in
+			guard transaction != nil
+			else
+			{
+				print(error.localizedDescription)
+				return
+			}
+			print("Success")
+		})
+	}
 }
 
