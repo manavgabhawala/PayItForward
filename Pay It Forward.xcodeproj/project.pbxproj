@@ -12,33 +12,11 @@
 		82AF19211C01040100D859D0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 82AF191F1C01040100D859D0 /* Main.storyboard */; };
 		82AF19231C01040100D859D0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 82AF19221C01040100D859D0 /* Assets.xcassets */; };
 		82AF19261C01040100D859D0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 82AF19241C01040100D859D0 /* LaunchScreen.storyboard */; };
-		82AF19821C01062600D859D0 /* libvenmo-sdk.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 82AF197D1C01060A00D859D0 /* libvenmo-sdk.a */; };
 		82AF19841C0106EB00D859D0 /* MyoKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82AF19831C0106EB00D859D0 /* MyoKit.framework */; };
+		82AF19861C01096800D859D0 /* VenmoAppSwitch.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82AF19851C01096800D859D0 /* VenmoAppSwitch.framework */; };
+		82AF19881C0109C400D859D0 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82AF19871C0109C400D859D0 /* UIKit.framework */; };
+		82AF198A1C0109C800D859D0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82AF19891C0109C800D859D0 /* Foundation.framework */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		82AF197C1C01060A00D859D0 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 82AF19761C01060900D859D0 /* venmo-sdk.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 2D5EF54217EF41B100DDD15A;
-			remoteInfo = "venmo-sdk";
-		};
-		82AF197E1C01060A00D859D0 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 82AF19761C01060900D859D0 /* venmo-sdk.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 2D5EF55217EF41B100DDD15A;
-			remoteInfo = "venmo-sdk-specs";
-		};
-		82AF19801C01060A00D859D0 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 82AF19761C01060900D859D0 /* venmo-sdk.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = EB49E22A19266E0D008EA5DC;
-			remoteInfo = "venmo-sdk-integration-specs";
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		82AF19181C01040100D859D0 /* Pay It Forward.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Pay It Forward.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -49,8 +27,10 @@
 		82AF19251C01040100D859D0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		82AF19271C01040100D859D0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		82AF192D1C0104BF00D859D0 /* Pay It Forward-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Pay It Forward-Bridging-Header.h"; sourceTree = "<group>"; };
-		82AF19761C01060900D859D0 /* venmo-sdk.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = "venmo-sdk.xcodeproj"; path = "venmo-ios-sdk-master/venmo-sdk.xcodeproj"; sourceTree = SOURCE_ROOT; };
 		82AF19831C0106EB00D859D0 /* MyoKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = MyoKit.framework; sourceTree = "<group>"; };
+		82AF19851C01096800D859D0 /* VenmoAppSwitch.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = VenmoAppSwitch.framework; sourceTree = "<group>"; };
+		82AF19871C0109C400D859D0 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		82AF19891C0109C800D859D0 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,8 +38,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				82AF19821C01062600D859D0 /* libvenmo-sdk.a in Frameworks */,
+				82AF198A1C0109C800D859D0 /* Foundation.framework in Frameworks */,
+				82AF19881C0109C400D859D0 /* UIKit.framework in Frameworks */,
 				82AF19841C0106EB00D859D0 /* MyoKit.framework in Frameworks */,
+				82AF19861C01096800D859D0 /* VenmoAppSwitch.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -69,6 +51,8 @@
 		82AF190F1C01040100D859D0 = {
 			isa = PBXGroup;
 			children = (
+				82AF19891C0109C800D859D0 /* Foundation.framework */,
+				82AF19871C0109C400D859D0 /* UIKit.framework */,
 				82AF191A1C01040100D859D0 /* Pay It Forward */,
 				82AF19191C01040100D859D0 /* Products */,
 			);
@@ -92,20 +76,10 @@
 				82AF19241C01040100D859D0 /* LaunchScreen.storyboard */,
 				82AF19271C01040100D859D0 /* Info.plist */,
 				82AF192D1C0104BF00D859D0 /* Pay It Forward-Bridging-Header.h */,
+				82AF19851C01096800D859D0 /* VenmoAppSwitch.framework */,
 				82AF19831C0106EB00D859D0 /* MyoKit.framework */,
-				82AF19761C01060900D859D0 /* venmo-sdk.xcodeproj */,
 			);
 			path = "Pay It Forward";
-			sourceTree = "<group>";
-		};
-		82AF19771C01060900D859D0 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				82AF197D1C01060A00D859D0 /* libvenmo-sdk.a */,
-				82AF197F1C01060A00D859D0 /* venmo-sdk-specs.xctest */,
-				82AF19811C01060A00D859D0 /* venmo-sdk-integration-specs.xctest */,
-			);
-			name = Products;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -154,42 +128,12 @@
 			mainGroup = 82AF190F1C01040100D859D0;
 			productRefGroup = 82AF19191C01040100D859D0 /* Products */;
 			projectDirPath = "";
-			projectReferences = (
-				{
-					ProductGroup = 82AF19771C01060900D859D0 /* Products */;
-					ProjectRef = 82AF19761C01060900D859D0 /* venmo-sdk.xcodeproj */;
-				},
-			);
 			projectRoot = "";
 			targets = (
 				82AF19171C01040100D859D0 /* Pay It Forward */,
 			);
 		};
 /* End PBXProject section */
-
-/* Begin PBXReferenceProxy section */
-		82AF197D1C01060A00D859D0 /* libvenmo-sdk.a */ = {
-			isa = PBXReferenceProxy;
-			fileType = archive.ar;
-			path = "libvenmo-sdk.a";
-			remoteRef = 82AF197C1C01060A00D859D0 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		82AF197F1C01060A00D859D0 /* venmo-sdk-specs.xctest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = "venmo-sdk-specs.xctest";
-			remoteRef = 82AF197E1C01060A00D859D0 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		82AF19811C01060A00D859D0 /* venmo-sdk-integration-specs.xctest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = "venmo-sdk-integration-specs.xctest";
-			remoteRef = 82AF19801C01060A00D859D0 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		82AF19161C01040100D859D0 /* Resources */ = {
