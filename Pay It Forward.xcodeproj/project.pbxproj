@@ -27,8 +27,8 @@
 		82AF19251C01040100D859D0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		82AF19271C01040100D859D0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		82AF192D1C0104BF00D859D0 /* Pay It Forward-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Pay It Forward-Bridging-Header.h"; sourceTree = "<group>"; };
-		82AF19831C0106EB00D859D0 /* MyoKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = MyoKit.framework; sourceTree = "<group>"; };
-		82AF19851C01096800D859D0 /* VenmoAppSwitch.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = VenmoAppSwitch.framework; sourceTree = "<group>"; };
+		82AF19831C0106EB00D859D0 /* MyoKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MyoKit.framework; path = "Pay It Forward/MyoKit.framework"; sourceTree = "<group>"; };
+		82AF19851C01096800D859D0 /* VenmoAppSwitch.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = VenmoAppSwitch.framework; path = "Pay It Forward/VenmoAppSwitch.framework"; sourceTree = "<group>"; };
 		82AF19871C0109C400D859D0 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		82AF19891C0109C800D859D0 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
@@ -51,9 +51,8 @@
 		82AF190F1C01040100D859D0 = {
 			isa = PBXGroup;
 			children = (
-				82AF19891C0109C800D859D0 /* Foundation.framework */,
-				82AF19871C0109C400D859D0 /* UIKit.framework */,
 				82AF191A1C01040100D859D0 /* Pay It Forward */,
+				82AF198B1C010A3E00D859D0 /* Frameworks */,
 				82AF19191C01040100D859D0 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -76,10 +75,19 @@
 				82AF19241C01040100D859D0 /* LaunchScreen.storyboard */,
 				82AF19271C01040100D859D0 /* Info.plist */,
 				82AF192D1C0104BF00D859D0 /* Pay It Forward-Bridging-Header.h */,
+			);
+			path = "Pay It Forward";
+			sourceTree = "<group>";
+		};
+		82AF198B1C010A3E00D859D0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				82AF19891C0109C800D859D0 /* Foundation.framework */,
+				82AF19871C0109C400D859D0 /* UIKit.framework */,
 				82AF19851C01096800D859D0 /* VenmoAppSwitch.framework */,
 				82AF19831C0106EB00D859D0 /* MyoKit.framework */,
 			);
-			path = "Pay It Forward";
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
