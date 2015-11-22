@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -18,42 +19,59 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tBl-YE-MND">
-                                <rect key="frame" x="0.0" y="364" width="600" height="216"/>
-                                <animations/>
-                            </pickerView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vID-hl-bOb">
-                                <rect key="frame" x="289.5" y="289.5" width="21" height="20.5"/>
-                                <animations/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <webView hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jUf-Hf-B3r">
                                 <rect key="frame" x="0.0" y="64" width="600" height="536"/>
                                 <animations/>
                                 <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="deviceRGB"/>
                             </webView>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tBl-YE-MND">
+                                <rect key="frame" x="0.0" y="413.5" width="600" height="166.5"/>
+                                <animations/>
+                            </pickerView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="shr-Bd-102">
+                                <rect key="frame" x="191" y="256" width="24" height="48"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="40"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="200" translatesAutoresizingMaskIntoConstraints="NO" id="67K-rZ-zLI">
+                                <rect key="frame" x="225" y="220" width="150" height="119.5"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="oyE-Lc-emC"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="100"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Circle" translatesAutoresizingMaskIntoConstraints="NO" id="LT0-aw-HcR">
+                                <rect key="frame" x="175" y="155" width="250.5" height="250.5"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="LT0-aw-HcR" secondAttribute="height" multiplier="1:1" id="7gV-ln-msQ"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <animations/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="jUf-Hf-B3r" secondAttribute="bottom" id="3eI-0s-uJ6"/>
                             <constraint firstAttribute="trailingMargin" secondItem="jUf-Hf-B3r" secondAttribute="trailing" constant="-20" id="IsB-6U-PK7"/>
                             <constraint firstItem="jUf-Hf-B3r" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="K71-WC-Hcd"/>
+                            <constraint firstItem="67K-rZ-zLI" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-20" id="NX1-T6-5pe"/>
                             <constraint firstItem="tBl-YE-MND" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="NuE-vI-pgs"/>
-                            <constraint firstItem="vID-hl-bOb" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="PGi-QT-4zs"/>
+                            <constraint firstItem="67K-rZ-zLI" firstAttribute="centerY" secondItem="LT0-aw-HcR" secondAttribute="centerY" id="RNV-oQ-PLa"/>
                             <constraint firstAttribute="trailingMargin" secondItem="tBl-YE-MND" secondAttribute="trailing" constant="-20" id="V9T-1t-uUS"/>
+                            <constraint firstItem="LT0-aw-HcR" firstAttribute="leading" secondItem="67K-rZ-zLI" secondAttribute="leading" constant="-50" id="ZTc-O1-SFk"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="tBl-YE-MND" secondAttribute="bottom" constant="20" id="Zlr-8A-n1S"/>
-                            <constraint firstItem="vID-hl-bOb" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="oti-J7-DSA"/>
-                            <constraint firstItem="vID-hl-bOb" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="rQA-z6-s71"/>
+                            <constraint firstItem="67K-rZ-zLI" firstAttribute="trailing" secondItem="LT0-aw-HcR" secondAttribute="trailing" constant="-50" id="dIA-8W-Po3"/>
+                            <constraint firstItem="tBl-YE-MND" firstAttribute="top" relation="greaterThanOrEqual" secondItem="LT0-aw-HcR" secondAttribute="bottom" constant="8" id="kiV-8M-gmI"/>
+                            <constraint firstItem="67K-rZ-zLI" firstAttribute="leading" secondItem="shr-Bd-102" secondAttribute="trailing" constant="10" id="mWj-gy-GtE"/>
+                            <constraint firstItem="67K-rZ-zLI" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ofQ-9g-OgO"/>
                             <constraint firstItem="jUf-Hf-B3r" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="t1a-Ig-q9z"/>
+                            <constraint firstItem="67K-rZ-zLI" firstAttribute="centerY" secondItem="shr-Bd-102" secondAttribute="centerY" id="zGH-U4-YMa"/>
                         </constraints>
-                        <variation key="default">
-                            <mask key="constraints">
-                                <exclude reference="oti-J7-DSA"/>
-                            </mask>
-                        </variation>
                     </view>
                     <navigationItem key="navigationItem" id="2X4-KV-bWG">
                         <barButtonItem key="rightBarButtonItem" systemItem="action" id="C6b-Tu-CJV">
@@ -63,7 +81,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="labelAmount" destination="vID-hl-bOb" id="KCd-Eo-UhN"/>
+                        <outlet property="labelAmount" destination="67K-rZ-zLI" id="SYv-1h-EU4"/>
                         <outlet property="peerPicker" destination="tBl-YE-MND" id="xyA-5S-xL5"/>
                         <outlet property="webView" destination="jUf-Hf-B3r" id="1NJ-im-yyk"/>
                     </connections>
@@ -92,4 +110,7 @@
             <point key="canvasLocation" x="283" y="-402"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Circle" width="360" height="360"/>
+    </resources>
 </document>

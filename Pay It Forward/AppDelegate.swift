@@ -42,6 +42,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 		let settings = UIUserNotificationSettings(forTypes: types, categories: Set<UIUserNotificationCategory>(arrayLiteral: category))
 		
 		UIApplication.sharedApplication().registerUserNotificationSettings(settings)
+		
+		UIApplication.sharedApplication().performSelector("_setApplicationIsOpaque:", withObject: false)
+		window?.backgroundColor = UIColor.clearColor()
+		window?.opaque = false
 		return true
 	}
 
