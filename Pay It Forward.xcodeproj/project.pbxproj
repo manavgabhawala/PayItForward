@@ -13,6 +13,12 @@
 		82AF19A61C01141400D859D0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 82AF19A51C01141400D859D0 /* Assets.xcassets */; };
 		82AF19A91C01141400D859D0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 82AF19A71C01141400D859D0 /* LaunchScreen.storyboard */; };
 		82AF19B11C01143300D859D0 /* MyoKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82AF19B01C01143300D859D0 /* MyoKit.framework */; };
+		82AF19B31C01156400D859D0 /* MGNearbyServiceBrowser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82AF19B21C01156400D859D0 /* MGNearbyServiceBrowser.swift */; };
+		82AF19B51C0115C800D859D0 /* MGPeerID.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82AF19B41C0115C800D859D0 /* MGPeerID.swift */; };
+		82AF19B71C01192E00D859D0 /* MultipeerError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82AF19B61C01192E00D859D0 /* MultipeerError.swift */; };
+		82AF19B91C01193900D859D0 /* MGNerabyServiceBrowserDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82AF19B81C01193900D859D0 /* MGNerabyServiceBrowserDelegate.swift */; };
+		82AF19BB1C01193F00D859D0 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82AF19BA1C01193F00D859D0 /* Extensions.swift */; };
+		82AF19BE1C0121D200D859D0 /* VenmoDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82AF19BD1C0121D200D859D0 /* VenmoDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +30,12 @@
 		82AF19A81C01141400D859D0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		82AF19AA1C01141400D859D0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		82AF19B01C01143300D859D0 /* MyoKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = MyoKit.framework; sourceTree = "<group>"; };
+		82AF19B21C01156400D859D0 /* MGNearbyServiceBrowser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MGNearbyServiceBrowser.swift; sourceTree = "<group>"; };
+		82AF19B41C0115C800D859D0 /* MGPeerID.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MGPeerID.swift; sourceTree = "<group>"; };
+		82AF19B61C01192E00D859D0 /* MultipeerError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MultipeerError.swift; sourceTree = "<group>"; };
+		82AF19B81C01193900D859D0 /* MGNerabyServiceBrowserDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MGNerabyServiceBrowserDelegate.swift; sourceTree = "<group>"; };
+		82AF19BA1C01193F00D859D0 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		82AF19BD1C0121D200D859D0 /* VenmoDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VenmoDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,7 +70,10 @@
 			isa = PBXGroup;
 			children = (
 				82AF199E1C01141400D859D0 /* AppDelegate.swift */,
+				82AF19BA1C01193F00D859D0 /* Extensions.swift */,
 				82AF19A01C01141400D859D0 /* ViewController.swift */,
+				82AF19BD1C0121D200D859D0 /* VenmoDelegate.swift */,
+				82AF19BC1C01194A00D859D0 /* Proximity Discovery */,
 				82AF19A21C01141400D859D0 /* Main.storyboard */,
 				82AF19A51C01141400D859D0 /* Assets.xcassets */,
 				82AF19A71C01141400D859D0 /* LaunchScreen.storyboard */,
@@ -66,6 +81,17 @@
 				82AF19B01C01143300D859D0 /* MyoKit.framework */,
 			);
 			path = "Pay It Forward";
+			sourceTree = "<group>";
+		};
+		82AF19BC1C01194A00D859D0 /* Proximity Discovery */ = {
+			isa = PBXGroup;
+			children = (
+				82AF19B41C0115C800D859D0 /* MGPeerID.swift */,
+				82AF19B21C01156400D859D0 /* MGNearbyServiceBrowser.swift */,
+				82AF19B61C01192E00D859D0 /* MultipeerError.swift */,
+				82AF19B81C01193900D859D0 /* MGNerabyServiceBrowserDelegate.swift */,
+			);
+			name = "Proximity Discovery";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -100,6 +126,7 @@
 				TargetAttributes = {
 					82AF199A1C01141400D859D0 = {
 						CreatedOnToolsVersion = 7.1.1;
+						DevelopmentTeam = Y7CAGCHT9U;
 					};
 				};
 			};
@@ -139,8 +166,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				82AF19B91C01193900D859D0 /* MGNerabyServiceBrowserDelegate.swift in Sources */,
 				82AF19A11C01141400D859D0 /* ViewController.swift in Sources */,
+				82AF19B71C01192E00D859D0 /* MultipeerError.swift in Sources */,
+				82AF19B31C01156400D859D0 /* MGNearbyServiceBrowser.swift in Sources */,
+				82AF19B51C0115C800D859D0 /* MGPeerID.swift in Sources */,
 				82AF199F1C01141400D859D0 /* AppDelegate.swift in Sources */,
+				82AF19BE1C0121D200D859D0 /* VenmoDelegate.swift in Sources */,
+				82AF19BB1C01193F00D859D0 /* Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -253,6 +286,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Pay",
@@ -260,9 +295,11 @@
 					Forward,
 				);
 				INFOPLIST_FILE = "Pay It Forward/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "ManavGabhawala.Pay-It-Forward";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -270,6 +307,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Pay",
@@ -277,9 +316,11 @@
 					Forward,
 				);
 				INFOPLIST_FILE = "Pay It Forward/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "ManavGabhawala.Pay-It-Forward";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
