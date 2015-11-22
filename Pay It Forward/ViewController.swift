@@ -15,6 +15,7 @@ class ViewController: UIViewController
 	var server : MGNearbyServiceBrowser!
 	@IBOutlet var peerPicker: UIPickerView!
 	var peers = [MGPeerID]()
+	var amount = 0
 	override func viewDidLoad()
 	{
 		super.viewDidLoad()
@@ -57,23 +58,37 @@ class ViewController: UIViewController
 			print("Error casting")
 			return
 		}
-		pose.type
+		let device = (TLMHub.sharedHub().myoDevices().first as? TLMMyo)
 		switch pose.type
 		{
 		case .DoubleTap:
-			print("Double tap")
+			MGDebugLog("Double tap")
+			device?.vibrateWithLength(TLMVibrationLength.Short)
+			//submit the
 		case .FingersSpread:
-			print("Fingers Spread")
+			MGDebugLog("Fingers Spread")
+			//increment by 10 
+			amount = amount + 10;
 		case .Fist:
-			print("Fist")
+			MGDebugLog("Fist")
+			device?.vibrateWithLength(TLMVibrationLength.Long)
+			//derement by 10
+			amount = max(0,amount - 10)
 		case .Rest:
-			print("Rest")
+			MGDebugLog("Rest")
+			//no change
 		case .WaveIn:
-			print("Wave in")
+			MGDebugLog("Wave in")
+			device?.vibrateWithLength(TLMVibrationLength.Medium)
+			//decrement by 1 
+			amount = max(0,amount - 1)
 		case .WaveOut:
-			print("Wave out")
+			MGDebugLog("Wave out")
+			device?.vibrateWithLength(TLMVibrationLength.Medium)
+			//increment by 1
+			++amount;
 		case .Unknown:
-			print("Unknown")
+			MGDebugLog("Unknown")
 		}
 	}
 	func didConnectToMyo(notification: NSNotification)
