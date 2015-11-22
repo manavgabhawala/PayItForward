@@ -12,7 +12,6 @@
 		82AF19A41C01141400D859D0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 82AF19A21C01141400D859D0 /* Main.storyboard */; };
 		82AF19A61C01141400D859D0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 82AF19A51C01141400D859D0 /* Assets.xcassets */; };
 		82AF19A91C01141400D859D0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 82AF19A71C01141400D859D0 /* LaunchScreen.storyboard */; };
-		82AF19B11C01143300D859D0 /* MyoKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82AF19B01C01143300D859D0 /* MyoKit.framework */; };
 		82AF19B31C01156400D859D0 /* MGNearbyServiceBrowser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82AF19B21C01156400D859D0 /* MGNearbyServiceBrowser.swift */; };
 		82AF19B51C0115C800D859D0 /* MGPeerID.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82AF19B41C0115C800D859D0 /* MGPeerID.swift */; };
 		82AF19B71C01192E00D859D0 /* MultipeerError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82AF19B61C01192E00D859D0 /* MultipeerError.swift */; };
@@ -22,6 +21,7 @@
 		82AF19C41C01431E00D859D0 /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82AF19C31C01431E00D859D0 /* CoreBluetooth.framework */; };
 		82AF19C61C01432500D859D0 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82AF19C51C01432500D859D0 /* SystemConfiguration.framework */; };
 		82AF19C81C01786D00D859D0 /* Payment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82AF19C71C01786D00D859D0 /* Payment.swift */; };
+		82AF19CA1C0243A100D859D0 /* MyoKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82AF19C91C0243A100D859D0 /* MyoKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,7 +32,6 @@
 		82AF19A51C01141400D859D0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		82AF19A81C01141400D859D0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		82AF19AA1C01141400D859D0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		82AF19B01C01143300D859D0 /* MyoKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = MyoKit.framework; sourceTree = "<group>"; };
 		82AF19B21C01156400D859D0 /* MGNearbyServiceBrowser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MGNearbyServiceBrowser.swift; sourceTree = "<group>"; };
 		82AF19B41C0115C800D859D0 /* MGPeerID.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MGPeerID.swift; sourceTree = "<group>"; };
 		82AF19B61C01192E00D859D0 /* MultipeerError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MultipeerError.swift; sourceTree = "<group>"; };
@@ -43,6 +42,7 @@
 		82AF19C31C01431E00D859D0 /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
 		82AF19C51C01432500D859D0 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		82AF19C71C01786D00D859D0 /* Payment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Payment.swift; sourceTree = "<group>"; };
+		82AF19C91C0243A100D859D0 /* MyoKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = MyoKit.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -50,9 +50,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				82AF19CA1C0243A100D859D0 /* MyoKit.framework in Frameworks */,
 				82AF19C61C01432500D859D0 /* SystemConfiguration.framework in Frameworks */,
 				82AF19C41C01431E00D859D0 /* CoreBluetooth.framework in Frameworks */,
-				82AF19B11C01143300D859D0 /* MyoKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -90,8 +90,8 @@
 				82AF19A51C01141400D859D0 /* Assets.xcassets */,
 				82AF19A71C01141400D859D0 /* LaunchScreen.storyboard */,
 				82AF19AA1C01141400D859D0 /* Info.plist */,
-				82AF19B01C01143300D859D0 /* MyoKit.framework */,
 				82AF19BF1C0141D000D859D0 /* Pay It Forward-Bridging-Header.h */,
+				82AF19C91C0243A100D859D0 /* MyoKit.framework */,
 			);
 			path = "Pay It Forward";
 			sourceTree = "<group>";
@@ -314,6 +314,9 @@
 					"$(PROJECT_DIR)/Pay",
 					It,
 					Forward,
+					"$(PROJECT_DIR)/Pay",
+					It,
+					Forward,
 				);
 				INFOPLIST_FILE = "Pay It Forward/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
@@ -336,6 +339,9 @@
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
+					"$(PROJECT_DIR)/Pay",
+					It,
+					Forward,
 					"$(PROJECT_DIR)/Pay",
 					It,
 					Forward,

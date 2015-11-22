@@ -48,12 +48,12 @@
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="200" translatesAutoresizingMaskIntoConstraints="NO" id="67K-rZ-zLI">
-                                                        <rect key="frame" x="225" y="195" width="150" height="86"/>
+                                                        <rect key="frame" x="225" y="178.5" width="150" height="119.5"/>
                                                         <animations/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="150" id="oyE-Lc-emC"/>
                                                         </constraints>
-                                                        <fontDescription key="fontDescription" type="system" weight="thin" pointSize="72"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="thin" pointSize="100"/>
                                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
@@ -128,6 +128,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="circle" destination="LT0-aw-HcR" id="fwa-ZU-1u9"/>
                         <outlet property="labelAmount" destination="67K-rZ-zLI" id="SYv-1h-EU4"/>
                         <outlet property="peerPicker" destination="tBl-YE-MND" id="xyA-5S-xL5"/>
                         <outlet property="webView" destination="jUf-Hf-B3r" id="1NJ-im-yyk"/>

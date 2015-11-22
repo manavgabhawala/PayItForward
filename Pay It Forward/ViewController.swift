@@ -21,24 +21,25 @@ class ViewController: UIViewController
 	var server : MGNearbyServiceBrowser!
 	@IBOutlet var peerPicker: UIPickerView!
 	var peers = [MGPeerID]()
-		
+	@IBOutlet var circle: UIImageView!
 	
 	var amount = 0
 	{
 		didSet
 		{
 			dispatch_async(dispatch_get_main_queue(), {
-				UIView.animateWithDuration(0.7, delay: 0.0, usingSpringWithDamping: 0.8, initialSpringVelocity: 0.0, options: .CurveEaseInOut, animations: {
-						self.labelAmount.contentScaleFactor = 1.5
-
-					}, completion: { completed in
+				UIView.animateWithDuration(0.7, delay: 0.0, usingSpringWithDamping: 0.5, initialSpringVelocity: 0.0, options: .CurveEaseInOut, animations: {
+						self.labelAmount.transform = CGAffineTransformScale(self.labelAmount.transform, 4, 4)
 						self.labelAmount.text = "\(self.amount)"
+						self.circle.alpha = 0.3
+					}, completion: { completed in
+					UIView.animateWithDuration(1.0, delay: 0.0, usingSpringWithDamping: 0.5, initialSpringVelocity: 0.0, options: .CurveEaseInOut, animations: {
+						self.labelAmount.transform = CGAffineTransformScale(self.labelAmount.transform, 0.25, 0.25)
+						self.circle.alpha = 1.0
+						}, completion: nil)
 				})
-				UIView.animateWithDuration(1.0, delay: 0.5, usingSpringWithDamping: 0.8, initialSpringVelocity: 1.0, options: .CurveEaseInOut, animations: {
-					self.labelAmount.contentScaleFactor = 1.0
-					
-					}, completion: nil)
-			})
+				})
+				
 		}
 	}
 	
@@ -120,20 +121,21 @@ class ViewController: UIViewController
 		{
 		case .DoubleTap:
 			MGDebugLog("Double tap")
-			device?.vibrateWithLength(TLMVibrationLength.Short)
-			//TODO: submit the amount to venmo
 			guard amount > 0
 			else
 			{
+				paymentAttemptFailed()
 				break
 			}
 			guard peers.count > 0
 			else
 			{
+				paymentAttemptFailed()
 				break
 			}
 			do
 			{
+				device?.vibrateWithLength(TLMVibrationLength.Short)
 				try server.makePayment(peers[peerPicker.selectedRowInComponent(0)], amount: amount)
 			}
 			catch
@@ -144,26 +146,26 @@ class ViewController: UIViewController
 		case .FingersSpread:
 			device?.vibrateWithLength(TLMVibrationLength.Medium)
 			MGDebugLog("Fingers Spread")
-			//decrement by 1
-			amount = max(0,amount - 1)
+			//reset to zero
+			amount = 0
 		case .Fist:
 			MGDebugLog("Fist")
 			device?.vibrateWithLength(TLMVibrationLength.Medium)
-			//increment by 1
-			++amount;
+			//increment by 10
+			amount += 10
 			case .Rest:
 			MGDebugLog("Rest")
 			//no change
 		case .WaveIn:
 			MGDebugLog("Wave in")
 			device?.vibrateWithLength(TLMVibrationLength.Medium)
-			//increment by 10
-			amount = amount + 10;
+			//decrement by 1
+			amount = max(0, amount - 1)
 		case .WaveOut:
 			MGDebugLog("Wave out")
 			device?.vibrateWithLength(TLMVibrationLength.Medium)
-			//derement by 10
-			amount = max(0,amount - 10)
+			//increment by 1
+			++amount
 		case .Unknown:
 			MGDebugLog("Unknown")
 		}
