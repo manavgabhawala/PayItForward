@@ -19,6 +19,29 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 		TLMHub.sharedHub()
 		TLMHub.sharedHub().lockingPolicy = .None
 		TLMHub.sharedHub().shouldNotifyInBackground = true
+		
+		let types = UIUserNotificationType.Badge.union(.Alert).union(.Sound)
+		let category = UIMutableUserNotificationCategory()
+		category.identifier = "payment"
+		let accept = UIMutableUserNotificationAction()
+		accept.title = "Accept"
+		accept.identifier = "accept"
+		accept.activationMode = .Foreground
+		accept.destructive = false
+		accept.authenticationRequired = true
+		
+		let decline = UIMutableUserNotificationAction()
+		decline.title = "Decline"
+		decline.identifier = "decline"
+		decline.activationMode = .Background
+		decline.destructive = true
+		decline.authenticationRequired = false
+		
+		category.setActions([accept, decline], forContext: UIUserNotificationActionContext.Default)
+		
+		let settings = UIUserNotificationSettings(forTypes: types, categories: Set<UIUserNotificationCategory>(arrayLiteral: category))
+		
+		UIApplication.sharedApplication().registerUserNotificationSettings(settings)
 		return true
 	}
 
@@ -43,7 +66,46 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 	func applicationWillTerminate(application: UIApplication) {
 		// Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 	}
-
-
+	
+	func application(application: UIApplication, handleActionWithIdentifier identifier: String?, forLocalNotification notification: UILocalNotification, completionHandler: () -> Void)
+	{
+		let id = notification.userInfo!["id"] as! String
+		let payment = payment_queue[id]!
+		payment_queue[id] = nil
+		if identifier == "accept"
+		{
+			processPayment(payment)
+		}
+	}
 }
+
+
+func processPayment(payment: Payment)
+{
+	let url = NSURL(string: "https://api.venmo.com/v1/payments")!
+	let request = NSMutableURLRequest(URL: url)
+	
+	request.HTTPMethod = "POST"
+	request.HTTPBody = try? NSJSONSerialization.dataWithJSONObject(["access_token": NSUserDefaults.standardUserDefaults().stringForKey("access_token")!, "user_id": payment.username, "note": "payment done by myo armband", "amount": payment.amount, "audience" : "private"],   options: [])
+	
+	request.addValue("application/json; charset=utf-8", forHTTPHeaderField: "Content-Type")
+	
+	let task = NSURLSession.sharedSession().dataTaskWithRequest(request) { (data, response, error) -> Void in
+		guard let data = data where error == nil
+			else {
+				print(error?.localizedDescription)
+				fatalError()
+		}
+		
+		guard let json = try? NSJSONSerialization.JSONObjectWithData(data, options: [])
+			else {
+				fatalError()
+		}
+		
+		print(json)
+	}
+	task.resume()
+}
+
+
 

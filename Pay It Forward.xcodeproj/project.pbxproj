@@ -21,6 +21,7 @@
 		82AF19BE1C0121D200D859D0 /* VenmoDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82AF19BD1C0121D200D859D0 /* VenmoDelegate.swift */; };
 		82AF19C41C01431E00D859D0 /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82AF19C31C01431E00D859D0 /* CoreBluetooth.framework */; };
 		82AF19C61C01432500D859D0 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82AF19C51C01432500D859D0 /* SystemConfiguration.framework */; };
+		82AF19C81C01786D00D859D0 /* Payment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82AF19C71C01786D00D859D0 /* Payment.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,6 +42,7 @@
 		82AF19BF1C0141D000D859D0 /* Pay It Forward-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Pay It Forward-Bridging-Header.h"; sourceTree = "<group>"; };
 		82AF19C31C01431E00D859D0 /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
 		82AF19C51C01432500D859D0 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		82AF19C71C01786D00D859D0 /* Payment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Payment.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +81,7 @@
 			isa = PBXGroup;
 			children = (
 				82AF199E1C01141400D859D0 /* AppDelegate.swift */,
+				82AF19C71C01786D00D859D0 /* Payment.swift */,
 				82AF19BA1C01193F00D859D0 /* Extensions.swift */,
 				82AF19A01C01141400D859D0 /* ViewController.swift */,
 				82AF19BD1C0121D200D859D0 /* VenmoDelegate.swift */,
@@ -188,6 +191,7 @@
 				82AF19B51C0115C800D859D0 /* MGPeerID.swift in Sources */,
 				82AF199F1C01141400D859D0 /* AppDelegate.swift in Sources */,
 				82AF19BE1C0121D200D859D0 /* VenmoDelegate.swift in Sources */,
+				82AF19C81C01786D00D859D0 /* Payment.swift in Sources */,
 				82AF19BB1C01193F00D859D0 /* Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -22,23 +22,32 @@
                                 <rect key="frame" x="0.0" y="364" width="600" height="216"/>
                                 <animations/>
                             </pickerView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="$0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vID-hl-bOb">
-                                <rect key="frame" x="300" y="289" width="21" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vID-hl-bOb">
+                                <rect key="frame" x="289.5" y="289.5" width="21" height="20.5"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <webView hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jUf-Hf-B3r">
+                                <rect key="frame" x="0.0" y="64" width="600" height="536"/>
+                                <animations/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="deviceRGB"/>
+                            </webView>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="jUf-Hf-B3r" secondAttribute="bottom" id="3eI-0s-uJ6"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="jUf-Hf-B3r" secondAttribute="trailing" constant="-20" id="IsB-6U-PK7"/>
+                            <constraint firstItem="jUf-Hf-B3r" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="K71-WC-Hcd"/>
                             <constraint firstItem="tBl-YE-MND" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="NuE-vI-pgs"/>
                             <constraint firstItem="vID-hl-bOb" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="PGi-QT-4zs"/>
                             <constraint firstAttribute="trailingMargin" secondItem="tBl-YE-MND" secondAttribute="trailing" constant="-20" id="V9T-1t-uUS"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="tBl-YE-MND" secondAttribute="bottom" constant="20" id="Zlr-8A-n1S"/>
                             <constraint firstItem="vID-hl-bOb" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="oti-J7-DSA"/>
                             <constraint firstItem="vID-hl-bOb" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="rQA-z6-s71"/>
+                            <constraint firstItem="jUf-Hf-B3r" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="t1a-Ig-q9z"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
@@ -56,6 +65,7 @@
                     <connections>
                         <outlet property="labelAmount" destination="vID-hl-bOb" id="KCd-Eo-UhN"/>
                         <outlet property="peerPicker" destination="tBl-YE-MND" id="xyA-5S-xL5"/>
+                        <outlet property="webView" destination="jUf-Hf-B3r" id="1NJ-im-yyk"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
