@@ -10,12 +10,21 @@ import UIKit
 
 class ViewController: UIViewController
 {
-	private let token = "ba39572d4b33b957f645f15062c7a604a76a944c2a56ed20abede056e3c46718"
+	
+	@IBOutlet var labelAmount: UILabel!
 	
 	var server : MGNearbyServiceBrowser!
 	@IBOutlet var peerPicker: UIPickerView!
 	var peers = [MGPeerID]()
 	var amount = 0
+	{
+		didSet
+		{
+			labelAmount.text = "$ \(amount)"
+		}
+	}
+	
+	
 	override func viewDidLoad()
 	{
 		super.viewDidLoad()
@@ -27,7 +36,7 @@ class ViewController: UIViewController
 		peerPicker.delegate = self
 		peerPicker.dataSource = self
 		
-		
+		amount = 0
 		NSNotificationCenter.defaultCenter().addObserver(self, selector: "didRecievePoseChange:", name: TLMMyoDidReceivePoseChangedNotification, object: nil)
 		NSNotificationCenter.defaultCenter().addObserver(self, selector: "didConnectToMyo:", name: TLMHubDidConnectDeviceNotification, object: nil)
 	}
@@ -64,7 +73,7 @@ class ViewController: UIViewController
 		case .DoubleTap:
 			MGDebugLog("Double tap")
 			device?.vibrateWithLength(TLMVibrationLength.Short)
-			//submit the
+			//submit the amount to venmo
 		case .FingersSpread:
 			MGDebugLog("Fingers Spread")
 			//increment by 10 

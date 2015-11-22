@@ -22,8 +22,8 @@
                                 <rect key="frame" x="0.0" y="364" width="600" height="216"/>
                                 <animations/>
                             </pickerView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vID-hl-bOb">
-                                <rect key="frame" x="279" y="289" width="42" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="$0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vID-hl-bOb">
+                                <rect key="frame" x="300" y="289" width="21" height="21"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -40,6 +40,11 @@
                             <constraint firstItem="vID-hl-bOb" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="oti-J7-DSA"/>
                             <constraint firstItem="vID-hl-bOb" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="rQA-z6-s71"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="oti-J7-DSA"/>
+                            </mask>
+                        </variation>
                     </view>
                     <navigationItem key="navigationItem" id="2X4-KV-bWG">
                         <barButtonItem key="rightBarButtonItem" systemItem="action" id="C6b-Tu-CJV">
@@ -49,6 +54,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="labelAmount" destination="vID-hl-bOb" id="KCd-Eo-UhN"/>
                         <outlet property="peerPicker" destination="tBl-YE-MND" id="xyA-5S-xL5"/>
                     </connections>
                 </viewController>

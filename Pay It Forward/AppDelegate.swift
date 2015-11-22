@@ -17,7 +17,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 	func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
 		// Override point for customization after application launch.
 		TLMHub.sharedHub()
-//		TLMHub.sharedHub().applicationIdentifier = "ManavGabhawala.Pay-It-Forward"
 		TLMHub.sharedHub().lockingPolicy = .None
 		TLMHub.sharedHub().shouldNotifyInBackground = true
 		return true
