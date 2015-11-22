@@ -19,11 +19,24 @@ class ViewController: UIViewController
 	{
 		super.viewDidLoad()
 		// Do any additional setup after loading the view, typically from a nib.
+		
 		server = MGNearbyServiceBrowser(peer: MGPeerID(displayName: UIDevice.currentDevice().name), serviceType: "pay-it-forward", venmoDelegate: self)
 		server.delegate = self
 		server.startBrowsingForPeers()
 		peerPicker.delegate = self
 		peerPicker.dataSource = self
+		
+		
+		NSNotificationCenter.defaultCenter().addObserver(self, selector: "didRecievePoseChange:", name: TLMMyoDidReceivePoseChangedNotification, object: nil)
+		NSNotificationCenter.defaultCenter().addObserver(self, selector: "didConnectToMyo:", name: TLMHubDidConnectDeviceNotification, object: nil)
+	}
+	override func viewDidAppear(animated: Bool)
+	{
+		super.viewDidAppear(animated)
+		if (TLMHub.sharedHub().myoDevices().count == 0)
+		{
+			showMyoSettings()
+		}
 	}
 	deinit
 	{
@@ -34,6 +47,41 @@ class ViewController: UIViewController
 	{
 		super.didReceiveMemoryWarning()
 		// Dispose of any resources that can be recreated.
+	}
+	
+	func didRecievePoseChange(notification: NSNotification)
+	{
+		guard let pose = notification.userInfo?[kTLMKeyPose] as? TLMPose
+		else
+		{
+			print("Error casting")
+			return
+		}
+		pose.type
+		switch pose.type
+		{
+		case .DoubleTap:
+			print("Double tap")
+		case .FingersSpread:
+			print("Fingers Spread")
+		case .Fist:
+			print("Fist")
+		case .Rest:
+			print("Rest")
+		case .WaveIn:
+			print("Wave in")
+		case .WaveOut:
+			print("Wave out")
+		case .Unknown:
+			print("Unknown")
+		}
+	}
+	func didConnectToMyo(notification: NSNotification)
+	{
+		if (TLMHub.sharedHub().myoDevices().count > 0)
+		{
+			navigationController?.popToRootViewControllerAnimated(true)
+		}
 	}
 }
 extension ViewController : MGNearbyServiceBrowserDelegate
@@ -47,6 +95,10 @@ extension ViewController : MGNearbyServiceBrowserDelegate
 	{
 		peers.removeElement(peerID)
 		peerPicker.reloadComponent(0)
+	}
+	@IBAction func showMyoSettings(_ : UIBarButtonItem? = nil)
+	{
+		navigationController?.pushViewController(TLMSettingsViewController(), animated: true)
 	}
 }
 extension ViewController : VenmoDelegate

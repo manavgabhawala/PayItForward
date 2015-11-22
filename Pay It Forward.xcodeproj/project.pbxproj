@@ -19,6 +19,8 @@
 		82AF19B91C01193900D859D0 /* MGNerabyServiceBrowserDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82AF19B81C01193900D859D0 /* MGNerabyServiceBrowserDelegate.swift */; };
 		82AF19BB1C01193F00D859D0 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82AF19BA1C01193F00D859D0 /* Extensions.swift */; };
 		82AF19BE1C0121D200D859D0 /* VenmoDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82AF19BD1C0121D200D859D0 /* VenmoDelegate.swift */; };
+		82AF19C41C01431E00D859D0 /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82AF19C31C01431E00D859D0 /* CoreBluetooth.framework */; };
+		82AF19C61C01432500D859D0 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82AF19C51C01432500D859D0 /* SystemConfiguration.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +38,9 @@
 		82AF19B81C01193900D859D0 /* MGNerabyServiceBrowserDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MGNerabyServiceBrowserDelegate.swift; sourceTree = "<group>"; };
 		82AF19BA1C01193F00D859D0 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		82AF19BD1C0121D200D859D0 /* VenmoDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VenmoDelegate.swift; sourceTree = "<group>"; };
+		82AF19BF1C0141D000D859D0 /* Pay It Forward-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Pay It Forward-Bridging-Header.h"; sourceTree = "<group>"; };
+		82AF19C31C01431E00D859D0 /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
+		82AF19C51C01432500D859D0 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +48,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				82AF19C61C01432500D859D0 /* SystemConfiguration.framework in Frameworks */,
+				82AF19C41C01431E00D859D0 /* CoreBluetooth.framework in Frameworks */,
 				82AF19B11C01143300D859D0 /* MyoKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -53,6 +60,8 @@
 		82AF19921C01141400D859D0 = {
 			isa = PBXGroup;
 			children = (
+				82AF19C51C01432500D859D0 /* SystemConfiguration.framework */,
+				82AF19C31C01431E00D859D0 /* CoreBluetooth.framework */,
 				82AF199D1C01141400D859D0 /* Pay It Forward */,
 				82AF199C1C01141400D859D0 /* Products */,
 			);
@@ -79,6 +88,7 @@
 				82AF19A71C01141400D859D0 /* LaunchScreen.storyboard */,
 				82AF19AA1C01141400D859D0 /* Info.plist */,
 				82AF19B01C01143300D859D0 /* MyoKit.framework */,
+				82AF19BF1C0141D000D859D0 /* Pay It Forward-Bridging-Header.h */,
 			);
 			path = "Pay It Forward";
 			sourceTree = "<group>";
@@ -127,6 +137,11 @@
 					82AF199A1C01141400D859D0 = {
 						CreatedOnToolsVersion = 7.1.1;
 						DevelopmentTeam = Y7CAGCHT9U;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -286,8 +301,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Pay",
@@ -300,6 +317,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "ManavGabhawala.Pay-It-Forward";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "Pay It Forward/Pay It Forward-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -307,8 +326,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Pay",
@@ -321,6 +342,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "ManavGabhawala.Pay-It-Forward";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "Pay It Forward/Pay It Forward-Bridging-Header.h";
 			};
 			name = Release;
 		};
