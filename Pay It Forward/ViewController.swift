@@ -51,6 +51,7 @@ class ViewController: UIViewController
 		super.viewDidLoad()
 		// Do any additional setup after loading the view, typically from a nib.
 		webView.hidden = true
+		
 		guard let accessTok = NSUserDefaults.standardUserDefaults().stringForKey("access_token")
 		else
 		{
@@ -191,10 +192,11 @@ extension ViewController : MGNearbyServiceBrowserDelegate
 	{
 		guard self.accessToken != nil && !self.accessToken.isEmpty
 		else { return }
-
-		navigationController?.pushViewController(TLMSettingsViewController(), animated: true)
+		let vc = TLMSettingsViewController()
+		navigationController?.pushViewController(vc, animated: true)
 	}
 }
+
 extension ViewController : VenmoDelegate
 {
 	func makePaymentWithAmount(amount: Int, toUser username: String, displayName: String)
@@ -255,7 +257,20 @@ extension ViewController: UIPickerViewDataSource, UIPickerViewDelegate
 	{
 		return peers.count == 0 ? 1 : peers.count
 	}
-	
+	func pickerView(pickerView: UIPickerView, attributedTitleForRow row: Int, forComponent component: Int) -> NSAttributedString?
+	{
+		let str : String
+		if peers.count == 0
+		{
+			str = "No Available Peers"
+		}
+		else
+		{
+			str = peers[row].displayName
+		}
+		let string = NSAttributedString(string: str, attributes: [NSForegroundColorAttributeName: UIColor.whiteColor()])
+		return string
+	}
 	func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String?
 	{
 		guard peers.count > 0

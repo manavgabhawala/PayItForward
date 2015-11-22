@@ -450,11 +450,13 @@ extension MGNearbyConnectionResolver : NSStreamDelegate
 		}
 		catch
 		{
+			self.closeConnection()
 			return nil
 		}
 	}
 	private func parseJSON(JSON: [NSObject: AnyObject]?)
 	{
+		defer { self.closeConnection() }
 		guard let JSON = JSON, let displayName = JSON["n"] as? String, let username = JSON["u"] as? String
 		else
 		{

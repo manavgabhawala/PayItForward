@@ -20,6 +20,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 		TLMHub.sharedHub().lockingPolicy = .None
 		TLMHub.sharedHub().shouldNotifyInBackground = true
 		
+//		NSUserDefaults.standardUserDefaults().removeObjectForKey("access_token")
+//		NSUserDefaults.standardUserDefaults().removeObjectForKey("username")
+//		NSUserDefaults.standardUserDefaults().removeObjectForKey("display_name")
+		
 		let types = UIUserNotificationType.Badge.union(.Alert).union(.Sound)
 		let category = UIMutableUserNotificationCategory()
 		category.identifier = "payment"
@@ -44,8 +48,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 		UIApplication.sharedApplication().registerUserNotificationSettings(settings)
 		
 		UIApplication.sharedApplication().performSelector("_setApplicationIsOpaque:", withObject: false)
-		window?.backgroundColor = UIColor.clearColor()
-		window?.opaque = false
 		return true
 	}
 
