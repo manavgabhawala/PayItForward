@@ -74,12 +74,6 @@ class ViewController: UIViewController
 		webView?.delegate = self
 		webView?.loadRequest(request)
 		webView?.scalesPageToFit = true
-//		let topConstraint = NSLayoutConstraint(item: webView!, attribute: .Top, relatedBy: .Equal, toItem: view, attribute: .Top, multiplier: 1.0, constant: 0.0)
-//		let leftConstraint = NSLayoutConstraint(item: webView!, attribute: .Left, relatedBy: .Equal, toItem: view, attribute: .Left, multiplier: 1.0, constant: 0.0)
-//		let bottomConstraint = NSLayoutConstraint(item: webView!, attribute: .Bottom, relatedBy: .Equal, toItem: view, attribute: .Bottom, multiplier: 1.0, constant: 0.0)
-//		let rightConstraint = NSLayoutConstraint(item: webView!, attribute: .Right, relatedBy: .Equal, toItem: view, attribute: .Right, multiplier: 1.0, constant: 0.0)
-//		view.addConstraints([topConstraint, bottomConstraint, leftConstraint, rightConstraint])
-//		view.addSubview(webView!)
 	}
 	
 	func afterVenmoLogin()
@@ -96,12 +90,10 @@ class ViewController: UIViewController
 
 	}
 	
-
 	deinit
 	{
 		server?.stopBrowsingForPeers()
 	}
-	
 	override func didReceiveMemoryWarning()
 	{
 		super.didReceiveMemoryWarning()
