@@ -32,6 +32,7 @@
 		8218821C1C190E09007E26FC /* SSKeychain.m in Sources */ = {isa = PBXBuildFile; fileRef = 821882181C190E09007E26FC /* SSKeychain.m */; };
 		8218821D1C190E09007E26FC /* SSKeychainQuery.h in Headers */ = {isa = PBXBuildFile; fileRef = 821882191C190E09007E26FC /* SSKeychainQuery.h */; };
 		8218821E1C190E09007E26FC /* SSKeychainQuery.m in Sources */ = {isa = PBXBuildFile; fileRef = 8218821A1C190E09007E26FC /* SSKeychainQuery.m */; };
+		821882221C192C1A007E26FC /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 821882211C192C1A007E26FC /* LoginViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -105,6 +106,7 @@
 		821882191C190E09007E26FC /* SSKeychainQuery.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSKeychainQuery.h; sourceTree = "<group>"; };
 		8218821A1C190E09007E26FC /* SSKeychainQuery.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSKeychainQuery.m; sourceTree = "<group>"; };
 		821882201C1912FB007E26FC /* Pay It Forward.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "Pay It Forward.entitlements"; sourceTree = "<group>"; };
+		821882211C192C1A007E26FC /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -163,6 +165,7 @@
 				821882201C1912FB007E26FC /* Pay It Forward.entitlements */,
 				821881CC1C18F9A9007E26FC /* AppDelegate.swift */,
 				821881CE1C18F9A9007E26FC /* ViewController.swift */,
+				821882211C192C1A007E26FC /* LoginViewController.swift */,
 				821881D01C18F9A9007E26FC /* Main.storyboard */,
 				821881D31C18F9A9007E26FC /* Assets.xcassets */,
 				821881D51C18F9A9007E26FC /* LaunchScreen.storyboard */,
@@ -371,6 +374,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				821882221C192C1A007E26FC /* LoginViewController.swift in Sources */,
 				821881CF1C18F9A9007E26FC /* ViewController.swift in Sources */,
 				821881CD1C18F9A9007E26FC /* AppDelegate.swift in Sources */,
 			);

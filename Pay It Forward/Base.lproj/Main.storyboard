@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -21,6 +22,60 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+        </scene>
+        <!--Login View Controller-->
+        <scene sceneID="MAx-lu-U1N">
+            <objects>
+                <viewController id="6BV-hW-rfT" customClass="LoginViewController" customModule="Pay_It_Forward" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="vLP-UQ-dCP"/>
+                        <viewControllerLayoutGuide type="bottom" id="Aeh-m2-CVj"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="bQu-Oe-cmA">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cg7-E4-moC">
+                                <rect key="frame" x="0.0" y="64" width="600" height="536"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="deviceRGB"/>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="cg7-E4-moC" firstAttribute="leading" secondItem="bQu-Oe-cmA" secondAttribute="leadingMargin" constant="-20" id="Etn-gv-5uV"/>
+                            <constraint firstItem="cg7-E4-moC" firstAttribute="top" secondItem="vLP-UQ-dCP" secondAttribute="bottom" id="N2K-yH-2Pj"/>
+                            <constraint firstItem="Aeh-m2-CVj" firstAttribute="top" secondItem="cg7-E4-moC" secondAttribute="bottom" id="VNU-nI-giw"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="cg7-E4-moC" secondAttribute="trailing" constant="-20" id="YbO-gH-ugK"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="3eb-Ny-5h7">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="P0a-ag-LZz"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="webView" destination="cg7-E4-moC" id="Bf2-QX-bAZ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kpo-8D-ZVM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1842" y="150"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="xI8-B5-Fej">
+            <objects>
+                <navigationController storyboardIdentifier="loginViewController" automaticallyAdjustsScrollViewInsets="NO" id="ERm-pl-ma7" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="FZS-Lv-6Ee">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="6BV-hW-rfT" kind="relationship" relationship="rootViewController" id="hsB-rn-msS"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oLc-1i-5vo" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1030" y="150"/>
         </scene>
     </scenes>
 </document>
