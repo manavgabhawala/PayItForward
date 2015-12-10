@@ -7,157 +7,318 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		82AF199F1C01141400D859D0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82AF199E1C01141400D859D0 /* AppDelegate.swift */; };
-		82AF19A11C01141400D859D0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82AF19A01C01141400D859D0 /* ViewController.swift */; };
-		82AF19A41C01141400D859D0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 82AF19A21C01141400D859D0 /* Main.storyboard */; };
-		82AF19A61C01141400D859D0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 82AF19A51C01141400D859D0 /* Assets.xcassets */; };
-		82AF19A91C01141400D859D0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 82AF19A71C01141400D859D0 /* LaunchScreen.storyboard */; };
-		82AF19B31C01156400D859D0 /* MGNearbyServiceBrowser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82AF19B21C01156400D859D0 /* MGNearbyServiceBrowser.swift */; };
-		82AF19B51C0115C800D859D0 /* MGPeerID.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82AF19B41C0115C800D859D0 /* MGPeerID.swift */; };
-		82AF19B71C01192E00D859D0 /* MultipeerError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82AF19B61C01192E00D859D0 /* MultipeerError.swift */; };
-		82AF19B91C01193900D859D0 /* MGNerabyServiceBrowserDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82AF19B81C01193900D859D0 /* MGNerabyServiceBrowserDelegate.swift */; };
-		82AF19BB1C01193F00D859D0 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82AF19BA1C01193F00D859D0 /* Extensions.swift */; };
-		82AF19BE1C0121D200D859D0 /* VenmoDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82AF19BD1C0121D200D859D0 /* VenmoDelegate.swift */; };
-		82AF19C41C01431E00D859D0 /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82AF19C31C01431E00D859D0 /* CoreBluetooth.framework */; };
-		82AF19C61C01432500D859D0 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82AF19C51C01432500D859D0 /* SystemConfiguration.framework */; };
-		82AF19C81C01786D00D859D0 /* Payment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82AF19C71C01786D00D859D0 /* Payment.swift */; };
-		82AF19CC1C02482C00D859D0 /* MyoKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82AF19CB1C02482C00D859D0 /* MyoKit.framework */; };
+		821881CD1C18F9A9007E26FC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 821881CC1C18F9A9007E26FC /* AppDelegate.swift */; };
+		821881CF1C18F9A9007E26FC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 821881CE1C18F9A9007E26FC /* ViewController.swift */; };
+		821881D21C18F9A9007E26FC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 821881D01C18F9A9007E26FC /* Main.storyboard */; };
+		821881D41C18F9A9007E26FC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 821881D31C18F9A9007E26FC /* Assets.xcassets */; };
+		821881D71C18F9A9007E26FC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 821881D51C18F9A9007E26FC /* LaunchScreen.storyboard */; };
+		821881E51C18F9E5007E26FC /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 821881E41C18F9E5007E26FC /* NotificationCenter.framework */; };
+		821881E81C18F9E5007E26FC /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 821881E71C18F9E5007E26FC /* TodayViewController.swift */; };
+		821881EB1C18F9E5007E26FC /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 821881E91C18F9E5007E26FC /* MainInterface.storyboard */; };
+		821881EF1C18F9E5007E26FC /* Pay It Forward.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 821881E21C18F9E5007E26FC /* Pay It Forward.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		821881FC1C18FA4C007E26FC /* CocoaMultipeer.h in Headers */ = {isa = PBXBuildFile; fileRef = 821881FB1C18FA4C007E26FC /* CocoaMultipeer.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		821882001C18FA4C007E26FC /* CocoaMultipeer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 821881F91C18FA4C007E26FC /* CocoaMultipeer.framework */; };
+		821882011C18FA4C007E26FC /* CocoaMultipeer.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 821881F91C18FA4C007E26FC /* CocoaMultipeer.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		821882061C18FA64007E26FC /* CocoaMultipeer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 821881F91C18FA4C007E26FC /* CocoaMultipeer.framework */; };
+		8218820C1C18FC01007E26FC /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 821882071C18FC01007E26FC /* Extensions.swift */; };
+		8218820D1C18FC01007E26FC /* MGNearbyServiceBrowser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 821882081C18FC01007E26FC /* MGNearbyServiceBrowser.swift */; };
+		8218820E1C18FC01007E26FC /* MGNerabyServiceBrowserDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 821882091C18FC01007E26FC /* MGNerabyServiceBrowserDelegate.swift */; };
+		8218820F1C18FC01007E26FC /* MGPeerID.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8218820A1C18FC01007E26FC /* MGPeerID.swift */; };
+		821882101C18FC01007E26FC /* MultipeerError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8218820B1C18FC01007E26FC /* MultipeerError.swift */; };
+		821882121C18FD86007E26FC /* VenmoDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 821882111C18FD86007E26FC /* VenmoDelegate.swift */; };
+		821882141C190D11007E26FC /* VenmoManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 821882131C190D11007E26FC /* VenmoManager.swift */; };
+		821882161C190DE7007E26FC /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 821882151C190DE7007E26FC /* Security.framework */; };
+		8218821B1C190E09007E26FC /* SSKeychain.h in Headers */ = {isa = PBXBuildFile; fileRef = 821882171C190E09007E26FC /* SSKeychain.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8218821C1C190E09007E26FC /* SSKeychain.m in Sources */ = {isa = PBXBuildFile; fileRef = 821882181C190E09007E26FC /* SSKeychain.m */; };
+		8218821D1C190E09007E26FC /* SSKeychainQuery.h in Headers */ = {isa = PBXBuildFile; fileRef = 821882191C190E09007E26FC /* SSKeychainQuery.h */; };
+		8218821E1C190E09007E26FC /* SSKeychainQuery.m in Sources */ = {isa = PBXBuildFile; fileRef = 8218821A1C190E09007E26FC /* SSKeychainQuery.m */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		821881ED1C18F9E5007E26FC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 821881C11C18F9A9007E26FC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 821881E11C18F9E5007E26FC;
+			remoteInfo = "Pay It Forward Today";
+		};
+		821881FE1C18FA4C007E26FC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 821881C11C18F9A9007E26FC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 821881F81C18FA4C007E26FC;
+			remoteInfo = CocoaMultipeer;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		821881F31C18F9E5007E26FC /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				821881EF1C18F9E5007E26FC /* Pay It Forward.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		821882051C18FA4C007E26FC /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				821882011C18FA4C007E26FC /* CocoaMultipeer.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
-		82AF199B1C01141400D859D0 /* Pay It Forward.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Pay It Forward.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		82AF199E1C01141400D859D0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		82AF19A01C01141400D859D0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		82AF19A31C01141400D859D0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		82AF19A51C01141400D859D0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		82AF19A81C01141400D859D0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		82AF19AA1C01141400D859D0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		82AF19B21C01156400D859D0 /* MGNearbyServiceBrowser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MGNearbyServiceBrowser.swift; sourceTree = "<group>"; };
-		82AF19B41C0115C800D859D0 /* MGPeerID.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MGPeerID.swift; sourceTree = "<group>"; };
-		82AF19B61C01192E00D859D0 /* MultipeerError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MultipeerError.swift; sourceTree = "<group>"; };
-		82AF19B81C01193900D859D0 /* MGNerabyServiceBrowserDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MGNerabyServiceBrowserDelegate.swift; sourceTree = "<group>"; };
-		82AF19BA1C01193F00D859D0 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
-		82AF19BD1C0121D200D859D0 /* VenmoDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VenmoDelegate.swift; sourceTree = "<group>"; };
-		82AF19BF1C0141D000D859D0 /* Pay It Forward-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Pay It Forward-Bridging-Header.h"; sourceTree = "<group>"; };
-		82AF19C31C01431E00D859D0 /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
-		82AF19C51C01432500D859D0 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
-		82AF19C71C01786D00D859D0 /* Payment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Payment.swift; sourceTree = "<group>"; };
-		82AF19CB1C02482C00D859D0 /* MyoKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = MyoKit.framework; sourceTree = "<group>"; };
+		821881C91C18F9A9007E26FC /* Pay It Forward.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Pay It Forward.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		821881CC1C18F9A9007E26FC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		821881CE1C18F9A9007E26FC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		821881D11C18F9A9007E26FC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		821881D31C18F9A9007E26FC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		821881D61C18F9A9007E26FC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		821881D81C18F9A9007E26FC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		821881E21C18F9E5007E26FC /* Pay It Forward.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Pay It Forward.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		821881E41C18F9E5007E26FC /* NotificationCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NotificationCenter.framework; path = System/Library/Frameworks/NotificationCenter.framework; sourceTree = SDKROOT; };
+		821881E71C18F9E5007E26FC /* TodayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayViewController.swift; sourceTree = "<group>"; };
+		821881EA1C18F9E5007E26FC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
+		821881EC1C18F9E5007E26FC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		821881F91C18FA4C007E26FC /* CocoaMultipeer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CocoaMultipeer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		821881FB1C18FA4C007E26FC /* CocoaMultipeer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CocoaMultipeer.h; sourceTree = "<group>"; };
+		821881FD1C18FA4C007E26FC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		821882071C18FC01007E26FC /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		821882081C18FC01007E26FC /* MGNearbyServiceBrowser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MGNearbyServiceBrowser.swift; sourceTree = "<group>"; };
+		821882091C18FC01007E26FC /* MGNerabyServiceBrowserDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MGNerabyServiceBrowserDelegate.swift; sourceTree = "<group>"; };
+		8218820A1C18FC01007E26FC /* MGPeerID.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MGPeerID.swift; sourceTree = "<group>"; };
+		8218820B1C18FC01007E26FC /* MultipeerError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MultipeerError.swift; sourceTree = "<group>"; };
+		821882111C18FD86007E26FC /* VenmoDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VenmoDelegate.swift; sourceTree = "<group>"; };
+		821882131C190D11007E26FC /* VenmoManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VenmoManager.swift; sourceTree = "<group>"; };
+		821882151C190DE7007E26FC /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		821882171C190E09007E26FC /* SSKeychain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSKeychain.h; sourceTree = "<group>"; };
+		821882181C190E09007E26FC /* SSKeychain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSKeychain.m; sourceTree = "<group>"; };
+		821882191C190E09007E26FC /* SSKeychainQuery.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSKeychainQuery.h; sourceTree = "<group>"; };
+		8218821A1C190E09007E26FC /* SSKeychainQuery.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSKeychainQuery.m; sourceTree = "<group>"; };
+		821882201C1912FB007E26FC /* Pay It Forward.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "Pay It Forward.entitlements"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		82AF19981C01141400D859D0 /* Frameworks */ = {
+		821881C61C18F9A9007E26FC /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				82AF19CC1C02482C00D859D0 /* MyoKit.framework in Frameworks */,
-				82AF19C61C01432500D859D0 /* SystemConfiguration.framework in Frameworks */,
-				82AF19C41C01431E00D859D0 /* CoreBluetooth.framework in Frameworks */,
+				821882001C18FA4C007E26FC /* CocoaMultipeer.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		821881DF1C18F9E5007E26FC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				821882061C18FA64007E26FC /* CocoaMultipeer.framework in Frameworks */,
+				821881E51C18F9E5007E26FC /* NotificationCenter.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		821881F51C18FA4C007E26FC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				821882161C190DE7007E26FC /* Security.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		821881BF1C18F56E007E26FC /* Frameworks */ = {
+		821881C01C18F9A9007E26FC = {
 			isa = PBXGroup;
 			children = (
-				82AF19C51C01432500D859D0 /* SystemConfiguration.framework */,
-				82AF19C31C01431E00D859D0 /* CoreBluetooth.framework */,
-				82AF19CB1C02482C00D859D0 /* MyoKit.framework */,
-			);
-			name = Frameworks;
-			path = "Pay It Forward";
-			sourceTree = "<group>";
-		};
-		82AF19921C01141400D859D0 = {
-			isa = PBXGroup;
-			children = (
-				82AF199D1C01141400D859D0 /* Pay It Forward */,
-				821881BF1C18F56E007E26FC /* Frameworks */,
-				82AF199C1C01141400D859D0 /* Products */,
+				821881CB1C18F9A9007E26FC /* Pay It Forward */,
+				821881E61C18F9E5007E26FC /* Pay It Forward Today */,
+				821881FA1C18FA4C007E26FC /* CocoaMultipeer */,
+				821881E31C18F9E5007E26FC /* Frameworks */,
+				821881CA1C18F9A9007E26FC /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		82AF199C1C01141400D859D0 /* Products */ = {
+		821881CA1C18F9A9007E26FC /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				82AF199B1C01141400D859D0 /* Pay It Forward.app */,
+				821881C91C18F9A9007E26FC /* Pay It Forward.app */,
+				821881E21C18F9E5007E26FC /* Pay It Forward.appex */,
+				821881F91C18FA4C007E26FC /* CocoaMultipeer.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		82AF199D1C01141400D859D0 /* Pay It Forward */ = {
+		821881CB1C18F9A9007E26FC /* Pay It Forward */ = {
 			isa = PBXGroup;
 			children = (
-				82AF199E1C01141400D859D0 /* AppDelegate.swift */,
-				82AF19C71C01786D00D859D0 /* Payment.swift */,
-				82AF19BA1C01193F00D859D0 /* Extensions.swift */,
-				82AF19A01C01141400D859D0 /* ViewController.swift */,
-				82AF19BD1C0121D200D859D0 /* VenmoDelegate.swift */,
-				82AF19BC1C01194A00D859D0 /* Proximity Discovery */,
-				82AF19A21C01141400D859D0 /* Main.storyboard */,
-				82AF19A51C01141400D859D0 /* Assets.xcassets */,
-				82AF19A71C01141400D859D0 /* LaunchScreen.storyboard */,
-				82AF19AA1C01141400D859D0 /* Info.plist */,
-				82AF19BF1C0141D000D859D0 /* Pay It Forward-Bridging-Header.h */,
+				821882201C1912FB007E26FC /* Pay It Forward.entitlements */,
+				821881CC1C18F9A9007E26FC /* AppDelegate.swift */,
+				821881CE1C18F9A9007E26FC /* ViewController.swift */,
+				821881D01C18F9A9007E26FC /* Main.storyboard */,
+				821881D31C18F9A9007E26FC /* Assets.xcassets */,
+				821881D51C18F9A9007E26FC /* LaunchScreen.storyboard */,
+				821881D81C18F9A9007E26FC /* Info.plist */,
 			);
 			path = "Pay It Forward";
 			sourceTree = "<group>";
 		};
-		82AF19BC1C01194A00D859D0 /* Proximity Discovery */ = {
+		821881E31C18F9E5007E26FC /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				82AF19B41C0115C800D859D0 /* MGPeerID.swift */,
-				82AF19B21C01156400D859D0 /* MGNearbyServiceBrowser.swift */,
-				82AF19B61C01192E00D859D0 /* MultipeerError.swift */,
-				82AF19B81C01193900D859D0 /* MGNerabyServiceBrowserDelegate.swift */,
+				821882151C190DE7007E26FC /* Security.framework */,
+				821881E41C18F9E5007E26FC /* NotificationCenter.framework */,
 			);
-			name = "Proximity Discovery";
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		821881E61C18F9E5007E26FC /* Pay It Forward Today */ = {
+			isa = PBXGroup;
+			children = (
+				821881E71C18F9E5007E26FC /* TodayViewController.swift */,
+				821881E91C18F9E5007E26FC /* MainInterface.storyboard */,
+				821881EC1C18F9E5007E26FC /* Info.plist */,
+			);
+			path = "Pay It Forward Today";
+			sourceTree = "<group>";
+		};
+		821881FA1C18FA4C007E26FC /* CocoaMultipeer */ = {
+			isa = PBXGroup;
+			children = (
+				821881FB1C18FA4C007E26FC /* CocoaMultipeer.h */,
+				821882111C18FD86007E26FC /* VenmoDelegate.swift */,
+				821882131C190D11007E26FC /* VenmoManager.swift */,
+				821882071C18FC01007E26FC /* Extensions.swift */,
+				821882081C18FC01007E26FC /* MGNearbyServiceBrowser.swift */,
+				821882091C18FC01007E26FC /* MGNerabyServiceBrowserDelegate.swift */,
+				8218820A1C18FC01007E26FC /* MGPeerID.swift */,
+				8218820B1C18FC01007E26FC /* MultipeerError.swift */,
+				821882171C190E09007E26FC /* SSKeychain.h */,
+				821882181C190E09007E26FC /* SSKeychain.m */,
+				821882191C190E09007E26FC /* SSKeychainQuery.h */,
+				8218821A1C190E09007E26FC /* SSKeychainQuery.m */,
+				821881FD1C18FA4C007E26FC /* Info.plist */,
+			);
+			path = CocoaMultipeer;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
+/* Begin PBXHeadersBuildPhase section */
+		821881F61C18FA4C007E26FC /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8218821B1C190E09007E26FC /* SSKeychain.h in Headers */,
+				8218821D1C190E09007E26FC /* SSKeychainQuery.h in Headers */,
+				821881FC1C18FA4C007E26FC /* CocoaMultipeer.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
 /* Begin PBXNativeTarget section */
-		82AF199A1C01141400D859D0 /* Pay It Forward */ = {
+		821881C81C18F9A9007E26FC /* Pay It Forward */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 82AF19AD1C01141400D859D0 /* Build configuration list for PBXNativeTarget "Pay It Forward" */;
+			buildConfigurationList = 821881DB1C18F9A9007E26FC /* Build configuration list for PBXNativeTarget "Pay It Forward" */;
 			buildPhases = (
-				82AF19971C01141400D859D0 /* Sources */,
-				82AF19981C01141400D859D0 /* Frameworks */,
-				82AF19991C01141400D859D0 /* Resources */,
+				821881C51C18F9A9007E26FC /* Sources */,
+				821881C61C18F9A9007E26FC /* Frameworks */,
+				821881C71C18F9A9007E26FC /* Resources */,
+				821881F31C18F9E5007E26FC /* Embed App Extensions */,
+				821882051C18FA4C007E26FC /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				821881EE1C18F9E5007E26FC /* PBXTargetDependency */,
+				821881FF1C18FA4C007E26FC /* PBXTargetDependency */,
+			);
+			name = "Pay It Forward";
+			productName = "Pay It Forward";
+			productReference = 821881C91C18F9A9007E26FC /* Pay It Forward.app */;
+			productType = "com.apple.product-type.application";
+		};
+		821881E11C18F9E5007E26FC /* Pay It Forward Today */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 821881F21C18F9E5007E26FC /* Build configuration list for PBXNativeTarget "Pay It Forward Today" */;
+			buildPhases = (
+				821881DE1C18F9E5007E26FC /* Sources */,
+				821881DF1C18F9E5007E26FC /* Frameworks */,
+				821881E01C18F9E5007E26FC /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = "Pay It Forward";
-			productName = "Pay It Forward";
-			productReference = 82AF199B1C01141400D859D0 /* Pay It Forward.app */;
-			productType = "com.apple.product-type.application";
+			name = "Pay It Forward Today";
+			productName = "Pay It Forward Today";
+			productReference = 821881E21C18F9E5007E26FC /* Pay It Forward.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+		821881F81C18FA4C007E26FC /* CocoaMultipeer */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 821882021C18FA4C007E26FC /* Build configuration list for PBXNativeTarget "CocoaMultipeer" */;
+			buildPhases = (
+				821881F41C18FA4C007E26FC /* Sources */,
+				821881F51C18FA4C007E26FC /* Frameworks */,
+				821881F61C18FA4C007E26FC /* Headers */,
+				821881F71C18FA4C007E26FC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CocoaMultipeer;
+			productName = CocoaMultipeer;
+			productReference = 821881F91C18FA4C007E26FC /* CocoaMultipeer.framework */;
+			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		82AF19931C01141400D859D0 /* Project object */ = {
+		821881C11C18F9A9007E26FC /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0710;
-				LastUpgradeCheck = 0710;
+				LastSwiftUpdateCheck = 0720;
+				LastUpgradeCheck = 0720;
 				ORGANIZATIONNAME = "Manav Gabhawala";
 				TargetAttributes = {
-					82AF199A1C01141400D859D0 = {
-						CreatedOnToolsVersion = 7.1.1;
+					821881C81C18F9A9007E26FC = {
+						CreatedOnToolsVersion = 7.2;
 						DevelopmentTeam = Y7CAGCHT9U;
 						SystemCapabilities = {
-							com.apple.BackgroundModes = {
+							com.apple.ApplicationGroups.iOS = {
 								enabled = 1;
 							};
 						};
 					};
+					821881E11C18F9E5007E26FC = {
+						CreatedOnToolsVersion = 7.2;
+						DevelopmentTeam = Y7CAGCHT9U;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+							com.apple.Keychain = {
+								enabled = 1;
+							};
+						};
+					};
+					821881F81C18FA4C007E26FC = {
+						CreatedOnToolsVersion = 7.2;
+					};
 				};
 			};
-			buildConfigurationList = 82AF19961C01141400D859D0 /* Build configuration list for PBXProject "Pay It Forward" */;
+			buildConfigurationList = 821881C41C18F9A9007E26FC /* Build configuration list for PBXProject "Pay It Forward" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -165,69 +326,124 @@
 				en,
 				Base,
 			);
-			mainGroup = 82AF19921C01141400D859D0;
-			productRefGroup = 82AF199C1C01141400D859D0 /* Products */;
+			mainGroup = 821881C01C18F9A9007E26FC;
+			productRefGroup = 821881CA1C18F9A9007E26FC /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				82AF199A1C01141400D859D0 /* Pay It Forward */,
+				821881C81C18F9A9007E26FC /* Pay It Forward */,
+				821881E11C18F9E5007E26FC /* Pay It Forward Today */,
+				821881F81C18FA4C007E26FC /* CocoaMultipeer */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		82AF19991C01141400D859D0 /* Resources */ = {
+		821881C71C18F9A9007E26FC /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				82AF19A91C01141400D859D0 /* LaunchScreen.storyboard in Resources */,
-				82AF19A61C01141400D859D0 /* Assets.xcassets in Resources */,
-				82AF19A41C01141400D859D0 /* Main.storyboard in Resources */,
+				821881D71C18F9A9007E26FC /* LaunchScreen.storyboard in Resources */,
+				821881D41C18F9A9007E26FC /* Assets.xcassets in Resources */,
+				821881D21C18F9A9007E26FC /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		821881E01C18F9E5007E26FC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				821881EB1C18F9E5007E26FC /* MainInterface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		821881F71C18FA4C007E26FC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		82AF19971C01141400D859D0 /* Sources */ = {
+		821881C51C18F9A9007E26FC /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				82AF19B91C01193900D859D0 /* MGNerabyServiceBrowserDelegate.swift in Sources */,
-				82AF19A11C01141400D859D0 /* ViewController.swift in Sources */,
-				82AF19B71C01192E00D859D0 /* MultipeerError.swift in Sources */,
-				82AF19B31C01156400D859D0 /* MGNearbyServiceBrowser.swift in Sources */,
-				82AF19B51C0115C800D859D0 /* MGPeerID.swift in Sources */,
-				82AF199F1C01141400D859D0 /* AppDelegate.swift in Sources */,
-				82AF19BE1C0121D200D859D0 /* VenmoDelegate.swift in Sources */,
-				82AF19C81C01786D00D859D0 /* Payment.swift in Sources */,
-				82AF19BB1C01193F00D859D0 /* Extensions.swift in Sources */,
+				821881CF1C18F9A9007E26FC /* ViewController.swift in Sources */,
+				821881CD1C18F9A9007E26FC /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		821881DE1C18F9E5007E26FC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				821881E81C18F9E5007E26FC /* TodayViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		821881F41C18FA4C007E26FC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				821882121C18FD86007E26FC /* VenmoDelegate.swift in Sources */,
+				8218821E1C190E09007E26FC /* SSKeychainQuery.m in Sources */,
+				8218821C1C190E09007E26FC /* SSKeychain.m in Sources */,
+				8218820E1C18FC01007E26FC /* MGNerabyServiceBrowserDelegate.swift in Sources */,
+				821882101C18FC01007E26FC /* MultipeerError.swift in Sources */,
+				8218820C1C18FC01007E26FC /* Extensions.swift in Sources */,
+				8218820F1C18FC01007E26FC /* MGPeerID.swift in Sources */,
+				821882141C190D11007E26FC /* VenmoManager.swift in Sources */,
+				8218820D1C18FC01007E26FC /* MGNearbyServiceBrowser.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		821881EE1C18F9E5007E26FC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 821881E11C18F9E5007E26FC /* Pay It Forward Today */;
+			targetProxy = 821881ED1C18F9E5007E26FC /* PBXContainerItemProxy */;
+		};
+		821881FF1C18FA4C007E26FC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 821881F81C18FA4C007E26FC /* CocoaMultipeer */;
+			targetProxy = 821881FE1C18FA4C007E26FC /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin PBXVariantGroup section */
-		82AF19A21C01141400D859D0 /* Main.storyboard */ = {
+		821881D01C18F9A9007E26FC /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				82AF19A31C01141400D859D0 /* Base */,
+				821881D11C18F9A9007E26FC /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
-		82AF19A71C01141400D859D0 /* LaunchScreen.storyboard */ = {
+		821881D51C18F9A9007E26FC /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				82AF19A81C01141400D859D0 /* Base */,
+				821881D61C18F9A9007E26FC /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		821881E91C18F9E5007E26FC /* MainInterface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				821881EA1C18F9E5007E26FC /* Base */,
+			);
+			name = MainInterface.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		82AF19AB1C01141400D859D0 /* Debug */ = {
+		821881D91C18F9A9007E26FC /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -263,7 +479,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -272,7 +488,7 @@
 			};
 			name = Debug;
 		};
-		82AF19AC1C01141400D859D0 /* Release */ = {
+		821881DA1C18F9A9007E26FC /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -302,7 +518,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -310,89 +526,157 @@
 			};
 			name = Release;
 		};
-		82AF19AE1C01141400D859D0 /* Debug */ = {
+		821881DC1C18F9A9007E26FC /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = "Pay It Forward/Pay It Forward.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				ENABLE_BITCODE = NO;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/Pay",
-					It,
-					Forward,
-					"$(PROJECT_DIR)/Pay",
-					It,
-					Forward,
-					"$(PROJECT_DIR)/Pay",
-					It,
-					Forward,
-				);
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = "Pay It Forward/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "ManavGabhawala.Pay-It-Forward";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
-				SWIFT_OBJC_BRIDGING_HEADER = "Pay It Forward/Pay It Forward-Bridging-Header.h";
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
-		82AF19AF1C01141400D859D0 /* Release */ = {
+		821881DD1C18F9A9007E26FC /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = "Pay It Forward/Pay It Forward.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				ENABLE_BITCODE = NO;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/Pay",
-					It,
-					Forward,
-					"$(PROJECT_DIR)/Pay",
-					It,
-					Forward,
-					"$(PROJECT_DIR)/Pay",
-					It,
-					Forward,
-				);
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = "Pay It Forward/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "ManavGabhawala.Pay-It-Forward";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
-				SWIFT_OBJC_BRIDGING_HEADER = "Pay It Forward/Pay It Forward-Bridging-Header.h";
+			};
+			name = Release;
+		};
+		821881F01C18F9E5007E26FC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = "Pay It Forward/Pay It Forward.entitlements";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				INFOPLIST_FILE = "Pay It Forward Today/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "ManavGabhawala.Pay-It-Forward.Pay-It-Forward-Today";
+				PRODUCT_NAME = "Pay It Forward";
+				PROVISIONING_PROFILE = "";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		821881F11C18F9E5007E26FC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = "Pay It Forward/Pay It Forward.entitlements";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				INFOPLIST_FILE = "Pay It Forward Today/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "ManavGabhawala.Pay-It-Forward.Pay-It-Forward-Today";
+				PRODUCT_NAME = "Pay It Forward";
+				PROVISIONING_PROFILE = "";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		821882031C18FA4C007E26FC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CLANG_ENABLE_MODULES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = CocoaMultipeer/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = ManavGabhawala.CocoaMultipeer;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		821882041C18FA4C007E26FC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CLANG_ENABLE_MODULES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = CocoaMultipeer/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = ManavGabhawala.CocoaMultipeer;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		82AF19961C01141400D859D0 /* Build configuration list for PBXProject "Pay It Forward" */ = {
+		821881C41C18F9A9007E26FC /* Build configuration list for PBXProject "Pay It Forward" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				82AF19AB1C01141400D859D0 /* Debug */,
-				82AF19AC1C01141400D859D0 /* Release */,
+				821881D91C18F9A9007E26FC /* Debug */,
+				821881DA1C18F9A9007E26FC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		82AF19AD1C01141400D859D0 /* Build configuration list for PBXNativeTarget "Pay It Forward" */ = {
+		821881DB1C18F9A9007E26FC /* Build configuration list for PBXNativeTarget "Pay It Forward" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				82AF19AE1C01141400D859D0 /* Debug */,
-				82AF19AF1C01141400D859D0 /* Release */,
+				821881DC1C18F9A9007E26FC /* Debug */,
+				821881DD1C18F9A9007E26FC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		821881F21C18F9E5007E26FC /* Build configuration list for PBXNativeTarget "Pay It Forward Today" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				821881F01C18F9E5007E26FC /* Debug */,
+				821881F11C18F9E5007E26FC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		821882021C18FA4C007E26FC /* Build configuration list for PBXNativeTarget "CocoaMultipeer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				821882031C18FA4C007E26FC /* Debug */,
+				821882041C18FA4C007E26FC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 82AF19931C01141400D859D0 /* Project object */;
+	rootObject = 821881C11C18F9A9007E26FC /* Project object */;
 }
