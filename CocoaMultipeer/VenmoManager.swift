@@ -58,6 +58,8 @@ public enum VenmoError : ErrorType
 		}
 	}
 	
+	public static let baseURL = NSURL(string: "https://api.venmo.com/v1/")!
+	
 	public static var clientID: String { return _clientID }
 	public static var clientSecret: String { return _clientSecret }
 	
@@ -112,7 +114,7 @@ public enum VenmoError : ErrorType
 		})
 	}
 	
-	func makePaymentWithAmount(amount: Int, toUser username: String, displayName: String)
+	public func makePaymentWithAmount(amount: Int, toUser username: String, displayName: String)
 	{
 		
 	}

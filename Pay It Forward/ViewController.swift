@@ -12,6 +12,8 @@ import CocoaMultipeer
 class ViewController: UIViewController
 {
 	
+	var server : MGNearbyServiceBrowser!
+	
 	override func viewDidLoad()
 	{
 		super.viewDidLoad()
@@ -23,11 +25,19 @@ class ViewController: UIViewController
 		guard VenmoManager.sharedManager().isLoggedIn
 		else
 		{
+			// TODO: Show splash page with login with venmo button here.
 			let controller = storyboard!.instantiateViewControllerWithIdentifier("loginViewController")
 			controller.modalPresentationStyle = .FormSheet
 			presentViewController(controller, animated: true, completion: nil)
 			return
 		}
+		if server == nil
+		{
+			server = MGNearbyServiceBrowser(peer: MGPeerID(displayName: VenmoManager.sharedManager().name), serviceType: "pay-it-forward", venmoDelegate: self)
+			// server.delegate = self 
+			// TODO: Make conformance
+		}
+		server.startBrowsingForPeers()
 	}
 	override func didReceiveMemoryWarning()
 	{
@@ -36,3 +46,22 @@ class ViewController: UIViewController
 	}
 }
 
+extension ViewController : VenmoDelegate
+{
+	var username: String { return VenmoManager.sharedManager().username }
+	var displayName: String { return VenmoManager.sharedManager().name }
+	var imageData: NSData? { return VenmoManager.sharedManager().imageData }
+	
+	func makePaymentWithAmount(amount: Int, toUser username: String, displayName: String)
+	{
+		VenmoManager.sharedManager().makePaymentWithAmount(amount, toUser: username, displayName: displayName)
+		server.startBrowsingForPeers() // Just in case it got stopped.
+	}
+	
+	func paymentAttemptFailed()
+	{
+		// TODO: Show error.
+		server.startBrowsingForPeers() // In case our automatic recovery failed.
+	}
+
+}
